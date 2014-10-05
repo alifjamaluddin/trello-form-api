@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Trello.com API Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Description here" name="description">
+	
+	 <!--[if lt IE 9]>
+      <script src="./js/lib/html5shiv.js"></script>
+      <script src="./js/lib/respond-min.js"></script>
+    <![endif]-->
+	
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/form.css" rel="stylesheet">
+	<link href="./css/datepicker.css" rel="stylesheet">
+	<link href="./css/bootstrapValidator.css" rel="stylesheet"/>
+	<link href="./css/main.css" rel="stylesheet">
+
+</head>
+<body role="document">
+<!--[if IE 9 ]>    <div id="ie9" class="detected" style="display:none"></div><![endif]-->
+<div class="container">
+	<div class="form-group">
+		<form class="form-signin" role="form" id="myform" name="myform" method="POST" action="" data-parsley-validate>
+			<div class="row">
+				<h2 class="form-signin-heading">Trello.com API Form</h2>
+				<input type="text" class="form-control" placeholder="Your name" id="name" name="name" tabindex="1" required autofocus/>
+				<div class='input-group' id='email'>
+					<span class="input-group-addon">
+					<span class="glyphicon glyphicon-envelope"></span>
+					</span>
+					<input type="email" class="form-control" placeholder="Your e-mail address" id="emailadd" required data-parsley-type="email" name="email" tabindex="2"/>
+				</div>
+				<!-- /.input-group #email -->
+				<select id='department' class='form-control' tabindex="3" name="department" required/>
+					<option value='' disabled selected>Your department</option>
+					<option value='A'>A</option>
+					<option value='B'>B</option>
+					<option value='C'>C</option>			
+				</select>
+				<div class='input-group date' id='start'>
+					<span class="input-group-addon">
+					<span class="glyphicon glyphicon-calendar"></span>
+					</span>
+					<input type="text" class="form-control" id="startdate" placeholder="Start date" required name="startdate" tabindex="4"/>
+				</div>
+				<!-- /.input-group .date #start -->
+				<input type="text" class="form-control" id="title" placeholder="Title" name="title" required tabindex="6"/>
+				<input type="text" class="form-control" id="objective" name="objective" placeholder="Objective" required tabindex="7"/>
+				<h3>Options 1</h3>
+			</div>
+			<!-- /.row -->
+			<div class="row">				
+				<div class="col-md-4">
+					
+					<div class="checkbox">
+						<label>
+							<input name="collection" class="coltype" type="checkbox" tabindex="8" value="Survey" data-parsley-mincheck="1"/>
+							Option 1
+						</label>
+					</div>
+				</div>
+				<!-- /.col-md-4 -->
+				<div class="col-md-4">
+					<div class="checkbox">
+						<label>
+							<input name="collection" class="coltype" type="checkbox" tabindex="9" value="Focus group"/>
+							Option 2
+						</label>
+					</div>
+				</div>
+				<!-- /.col-md-4 -->
+				<div class="col-md-4">
+					<div class="checkbox">
+						<label>
+							<input name="collection" class="coltype" type="checkbox" tabindex="10" value="Other" id="colother"/>
+							Option 3
+						</label>
+					</div>
+				</div>
+				<!-- /.col-md-4 -->
+			</div>
+			<!-- /.row -->
+			<div class="row">	
+				<textarea class="form-control notshown" id="dcother" name="dcother" placeholder="Only appears when Option 3 is selected" rows="5"></textarea>
+				<textarea class="form-control" id="mainbody" name="mainbody" required placeholder="What is the main text of your submission?" tabindex="12" rows="15"></textarea>
+			</div>
+			<!-- /.row -->
+			<div class="row">
+				<h3>Options 2</h3>
+				<div class="col-md-4">
+					<div class="checkbox">
+						<label>
+							<input name="audience" class="checkbx" type="checkbox" tabindex="13" data-parsley-mincheck="1" required value="Option 1"/>
+							Option 1
+						</label>
+					</div>
+					<!-- /.checkbox -->
+				</div>
+				<!-- /.col-md-4 -->
+				<div class="col-md-4">
+					<div class="checkbox">
+						<label>
+							<input name="audience" class="checkbx" type="checkbox" tabindex="17" value="Option 2"/>
+							Option 2
+						</label>
+					</div>
+					<!-- /.checkbox -->	
+				</div>
+				<!-- /.col-md-4 -->
+				<div class="col-md-4">
+					<div class="checkbox">
+						<label>
+							<input name="audience" class="checkbx" type="checkbox" tabindex="21" value="Option 3" id="o2other"/>
+							Option 3
+						</label>
+					</div>
+					<!-- /.checkbox -->
+			</div>
+			<!-- /.row -->
+			<div class="row">
+				<textarea class="form-control notshown" id="descmore" name="descmore" placeholder="Please describe more." rows="5"></textarea>
+				<label for="quesyesno">Yes or no question?</label>
+				<select class="form-control" id="quesyesno" name="quesyesno" tabindex="23" required>
+					<option value='' disabled selected>Choose one</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</select>
+			<textarea class="form-control" id="thirdques" name="thirdques" placeholder="What else?" required tabindex="25" rows="7"/></textarea>
+			<button class="btn btn-lg btn-primary btn-block" id="submit" tabindex="26">Submit</button>
+			</div>
+			<!-- /.row -->						
+		</form>		
+	</div>
+	<!-- /.form-group -->
+</div>
+<!-- /.container -->
+`
+<script data-main="./js/main" src="./js/lib/require.js"></script>
+
+</body>
+</html>
