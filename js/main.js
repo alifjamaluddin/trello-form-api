@@ -33,7 +33,7 @@ requirejs.config({
     }
 });
 	
-require(["trello-form"], function ($) {
+require(["trello-form"], function () {
 	
 
 });
